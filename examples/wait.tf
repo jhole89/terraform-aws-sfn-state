@@ -1,5 +1,5 @@
 module "wait_seconds" {
-  source      = "../wait"
+  source      = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/wait"
   comment     = "An example wait with seconds"
   time_metric = "Seconds"
   time_value  = 10
@@ -7,14 +7,14 @@ module "wait_seconds" {
 }
 
 module "wait_until_s" {
-  source      = "../wait"
+  source      = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/wait"
   comment     = "An example wait with seconds path"
   time_metric = "SecondsPath"
   time_value  = "$.seconds"
 }
 
 module "wait_timestamp" {
-  source      = "../wait"
+  source      = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/wait"
   comment     = "An example wait with timestamp"
   time_metric = "TimeStamp"
   time_value  = "2016-03-14T01:59:00Z"
@@ -22,7 +22,7 @@ module "wait_timestamp" {
 }
 
 module "wait_until_t" {
-  source      = "../wait"
+  source      = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/wait"
   comment     = "An example wait with timestamp path"
   time_metric = "TimeStampPath"
   time_value  = "$.expirydate"

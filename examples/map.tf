@@ -1,5 +1,5 @@
 module "validate_task" {
-  source = "../task"
+  source = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/task"
   resource = "arn:aws:lambda:us-east-1:123456789012:function:ship-val"
   comment = "An example task state"
 }

@@ -1,5 +1,5 @@
 module "base" {
-  source      = "../base"
+  source      = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/base"
   comment     = var.comment
   input_path  = var.input_path
   output_path = var.output_path

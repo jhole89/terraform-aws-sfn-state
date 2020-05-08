@@ -1,5 +1,5 @@
 module "task" {
-  source            = "../task"
+  source            = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/task"
   comment           = "An example task state"
   next              = "NextState"
   resource          = "arn:aws:states:us-east-1:123456789012:task:HelloWorld"

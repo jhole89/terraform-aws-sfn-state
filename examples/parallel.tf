@@ -1,21 +1,21 @@
 module "pass_state" {
-  source  = "../pass"
+  source  = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/pass"
   comment = "branch-pass-state"
 }
 
 module "succeed_state" {
-  source  = "../succeed"
+  source  = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/succeed"
   comment = "branch-succeed-state"
 }
 
 module "task_state" {
-  source   = "../task"
+  source   = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/task"
   resource = "some:resource::arn"
   comment  = "branch-task-state"
 }
 
 module "parallel" {
-  source  = "../parallel"
+  source  = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/parallel"
   comment = "An example parallel state"
   next    = "NextState"
   retry = [

@@ -1,5 +1,5 @@
 module "pass" {
-  source  = "../pass"
+  source  = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/pass"
   comment = "An example pass state"
   next    = "NextState"
   result = {

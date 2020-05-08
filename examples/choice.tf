@@ -1,5 +1,5 @@
 module "choice" {
-  source  = "../choice"
+  source  = "github.com/jhole89/terraform-aws-sfn-state.git?ref=master/choice"
   comment = "An example choice state"
   choices = [
     {
