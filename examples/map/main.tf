@@ -1,14 +1,14 @@
 module "validate_task" {
-  source = "../../modules/task"
-  name = "mylambdatask"
+  source   = "../../modules/task"
+  name     = "mylambdatask"
   resource = "arn:aws:lambda:us-east-1:123456789012:function:ship-val"
-  comment = "An example task state"
+  comment  = "An example task state"
 }
 
 module "map" {
   source  = "../../modules/map"
   comment = "An example map state"
-  name = "mymap"
+  name    = "mymap"
   retry = [
     {
       error_equals     = ["States.Timeout"]

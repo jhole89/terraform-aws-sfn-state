@@ -8,11 +8,11 @@ variable "comment" {
 }
 
 variable "cause" {
-  type = string
+  type    = string
   default = null
 }
 
 variable "error" {
-  type = string
+  type    = string
   default = null
 }

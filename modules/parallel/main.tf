@@ -46,10 +46,10 @@ locals {
     ]
     Branches = [for branch in var.branches : {
       StartAt = branch.start_at
-      States = merge([for state in branch.states : state]...)
+      States  = merge([for state in branch.states : state]...)
     }]
   }
 
-  state_defn = { (var.name) = merge(local.local_defn, module.base.defn)}
+  state_defn = { (var.name) = merge(local.local_defn, module.base.defn) }
   json       = jsonencode(local.state_defn)
 }

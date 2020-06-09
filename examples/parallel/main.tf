@@ -1,18 +1,18 @@
 module "pass_state" {
   source  = "../../modules/pass"
-  name = "my_pass_state"
+  name    = "my_pass_state"
   comment = "branch-pass-state"
 }
 
 module "succeed_state" {
   source  = "../../modules/succeed"
-  name = "my_succeed_state"
+  name    = "my_succeed_state"
   comment = "branch-succeed-state"
 }
 
 module "task_state" {
   source   = "../../modules/task"
-  name = "my_task_state"
+  name     = "my_task_state"
   resource = "some:resource::arn"
   comment  = "branch-task-state"
 }
@@ -20,7 +20,7 @@ module "task_state" {
 module "parallel" {
   source  = "../../modules/parallel"
   comment = "An example parallel state"
-  name = "my_parallel_state"
+  name    = "my_parallel_state"
   next    = "NextState"
   retry = [
     {

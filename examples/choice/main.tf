@@ -1,7 +1,7 @@
 module "choice" {
   source  = "../../modules/choice"
   comment = "An example choice state"
-  name = "mychoice"
+  name    = "mychoice"
   choices = [
     {
       operator = null

@@ -1,6 +1,6 @@
 module "pass" {
   source  = "../../modules/pass"
-  name = "my_pass_state"
+  name    = "my_pass_state"
   comment = "An example pass state"
   next    = "NextState"
   result = {

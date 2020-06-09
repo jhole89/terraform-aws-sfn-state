@@ -1,6 +1,6 @@
 module "succeed" {
   source  = "../../modules/succeed"
-  name = "my_succeed_state"
+  name    = "my_succeed_state"
   comment = "An example succeed state"
 }
 

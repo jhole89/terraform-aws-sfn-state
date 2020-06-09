@@ -32,34 +32,34 @@ locals {
   catches = [for catch in var.catch : merge(local.default_catch, catch)]
 
   local_defn = {
-    Type = "Map"
+    Type                              = "Map"
     var.next != null ? "Next" : "End" = var.next != null ? var.next : true
-    Parameters = var.parameters
-    ResultPath = var.result_path
-    MaxConcurrency = var.max_concurrency
-    ItemsPath = var.items_path
+    Parameters                        = var.parameters
+    ResultPath                        = var.result_path
+    MaxConcurrency                    = var.max_concurrency
+    ItemsPath                         = var.items_path
 
     Retry = [
-    for retry in local.retries : {
-      ErrorEquals = retry.error_equals
-      IntervalSeconds = retry.interval_seconds
-      MaxAttempts = retry.max_attempts
-      BackoffRate = retry.backoff_rate
-    }
+      for retry in local.retries : {
+        ErrorEquals     = retry.error_equals
+        IntervalSeconds = retry.interval_seconds
+        MaxAttempts     = retry.max_attempts
+        BackoffRate     = retry.backoff_rate
+      }
     ]
     Catch = [
-    for catch in local.catches : {
-      ErrorEquals = catch.error_equals
-      Next = catch.next
-      ResultsPath = catch.result_path
-    }
+      for catch in local.catches : {
+        ErrorEquals = catch.error_equals
+        Next        = catch.next
+        ResultsPath = catch.result_path
+      }
     ]
 
     Iterator = {
       StartAt = var.iterator.start_at
       //      States = local.states
       //    }
-      States = [for state in var.iterator.states: {
+      States = [for state in var.iterator.states : {
         (state.name) = state.state_defn
       }]
     }
