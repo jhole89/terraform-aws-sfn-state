@@ -28,6 +28,32 @@ be breaking changes between releases. Instead, pin to the release tag (e.g. `?re
 [latest releases](https://github.com/jhole89/terraform-aws-sfn-state/releases).
 
 <!--- BEGIN_TF_DOCS ---> 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 0.12.0 |
+| local | ~> 1.2 |
+
+## Providers
+
+No provider.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| comment | n/a | `string` | `null` | no |
+| start\_at | n/a | `string` | `null` | no |
+| states | n/a | `any` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| json | JSON encoded state definition for use with other terraform resources |
+| raw | n/a |
+
 <!--- END_TF_DOCS --->
 
 ## Contributing
