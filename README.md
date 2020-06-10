@@ -32,7 +32,7 @@ be breaking changes between releases. Instead, pin to the release tag (e.g. `?re
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.0 |
+| terraform | ~> 0.13.0 |
 | local | ~> 1.2 |
 
 ## Providers
