@@ -4,6 +4,4 @@ terraform {
   required_providers {
     local = "~> 1.2"
   }
-
-  experiments = [variable_validation]
 }
