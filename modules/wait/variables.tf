@@ -28,8 +28,8 @@ variable "time_metric" {
   default = "Seconds"
 
   validation {
-    condition     = can(contains(["Seconds", "TimeStamp", "SecondsPath", "TimeStampPath"], var.time_metric))
-    error_message = "Var time_metric must be one of Seconds, TimeStamp, SecondsPath, TimeStampPath."
+    condition     = can(contains(["Seconds", "Timestamp", "SecondsPath", "TimestampPath"], var.time_metric))
+    error_message = "Var time_metric must be one of Seconds, Timestamp, SecondsPath, TimestampPath."
   }
 }
 

@@ -4,6 +4,7 @@ module "wait_until_t" {
   comment     = "An example wait with timestamp path"
   time_metric = "TimestampPath"
   time_value  = "$.expirydate"
+  next        = "NextState"
 }
 
 output "json" {

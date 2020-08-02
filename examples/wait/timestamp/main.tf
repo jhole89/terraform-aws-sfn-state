@@ -2,7 +2,7 @@ module "wait_timestamp" {
   source      = "../../../modules/wait"
   name        = "wait_until"
   comment     = "An example wait with timestamp"
-  time_metric = "TimeStamp"
+  time_metric = "Timestamp"
   time_value  = "2016-03-14T01:59:00Z"
   next        = "NextState"
 }
