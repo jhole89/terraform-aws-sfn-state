@@ -105,3 +105,11 @@ module "stepfn" {
     module.helloworld.defn,
   ]
 }
+
+output "json" {
+  value = module.stepfn.json
+}
+
+output "raw" {
+  value = module.stepfn.raw
+}
