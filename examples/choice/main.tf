@@ -1,7 +1,7 @@
 module "choice" {
   source  = "../../modules/choice"
   comment = "An example choice state"
-  name    = "mychoice"
+  name    = "ChoiceStateX"
   choices = [
     {
       operator = null
@@ -40,4 +40,8 @@ module "choice" {
       ]
     }
   ]
+}
+
+output "json" {
+  value = module.choice.json
 }

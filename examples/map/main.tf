@@ -43,3 +43,7 @@ module "map" {
     ]
   }
 }
+
+output "json" {
+  value = module.map.json
+}
