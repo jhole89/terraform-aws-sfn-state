@@ -1,6 +1,6 @@
 module "task" {
   source            = "../../modules/task"
-  name              = "my_task_state"
+  name              = "TaskState"
   comment           = "An example task state"
   next              = "NextState"
   resource          = "arn:aws:states:us-east-1:123456789012:task:HelloWorld"
@@ -26,4 +26,8 @@ module "task" {
       next         = "Z"
     }
   ]
+}
+
+output "json" {
+  value = module.task.json
 }
