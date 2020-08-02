@@ -1,9 +1,9 @@
 module "succeed" {
   source  = "../../modules/succeed"
-  name    = "my_succeed_state"
+  name    = "SuccessState"
   comment = "An example succeed state"
 }
 
-output "succeed" {
+output "json" {
   value = module.succeed.json
 }

@@ -12,6 +12,19 @@ This module is currently pre-release
 
 ## Features
 
+Supported AWS Step Functions State:
+
+| SF state | Implemented |
+| --- | --- |
+| [CHOICE](https://states-language.net/spec.html#choice-state) | :heavy_check_mark: |
+| [FAIL](https://states-language.net/spec.html#fail-state) | :heavy_check_mark: |
+| [MAP](https://states-language.net/spec.html#map-state) | :heavy_check_mark: |
+| [PARALLEL](https://states-language.net/spec.html#parallel-state) | :heavy_check_mark: |
+| [PASS](https://states-language.net/spec.html#pass-state) | :heavy_check_mark: |
+| [SUCCEED](https://states-language.net/spec.html#succeed-state) | :heavy_check_mark: |
+| [TASK](https://states-language.net/spec.html#task-state) | :heavy_check_mark: |
+| [WAIT](https://states-language.net/spec.html#wait-state) | :heavy_check_mark: |
+
 The module will create the following resources:
 
 ## Usage example
