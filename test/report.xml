@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="4" failures="0" time="1.700" name="github.com/jhole89/terraform-aws-sft-state">
+		<properties>
+			<property name="go.version" value="go1.14.3"></property>
+		</properties>
+		<testcase classname="terraform-aws-sft-state" name="TestFailState" time="1.560"></testcase>
+		<testcase classname="terraform-aws-sft-state" name="TestPasslState" time="1.690"></testcase>
+		<testcase classname="terraform-aws-sft-state" name="TestSuccedState" time="1.630"></testcase>
+		<testcase classname="terraform-aws-sft-state" name="TestWaitStateSeconds" time="1.590"></testcase>
+	</testsuite>
+</testsuites>
