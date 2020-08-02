@@ -58,3 +58,7 @@ module "parallel" {
     }
   ]
 }
+
+output "json" {
+  value = module.parallel.json
+}
