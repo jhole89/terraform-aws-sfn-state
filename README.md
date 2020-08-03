@@ -56,7 +56,7 @@ No provider.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| comment | n/a | `string` | `null` | no |
+| comment | n/a | `string` | `""` | no |
 | start\_at | n/a | `string` | `null` | no |
 | states | n/a | `any` | n/a | yes |
 
