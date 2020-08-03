@@ -1,6 +1,6 @@
 variable "comment" {
   type    = string
-  default = null
+  default = ""
 }
 
 variable "start_at" {
