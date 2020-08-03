@@ -23,7 +23,7 @@ locals {
   ]
 
   default_catch = {
-    result_path = null
+    result_path = "$"
   }
   catches = [for catch in var.catch : merge(local.default_catch, catch)]
 

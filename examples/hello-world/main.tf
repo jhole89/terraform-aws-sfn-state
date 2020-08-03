@@ -51,7 +51,6 @@ module "wait3sec" {
   comment     = "A Wait state delays the state machine from continuing for a specified time."
   time_metric = "Seconds"
   time_value  = 3
-  output_path = null
   next        = module.parallel.name
 }
 

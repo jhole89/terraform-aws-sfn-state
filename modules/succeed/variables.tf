@@ -5,5 +5,5 @@ variable "name" {
 # Common State Fields
 variable "comment" {
   type    = string
-  default = null
+  default = ""
 }

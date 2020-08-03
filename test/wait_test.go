@@ -24,7 +24,7 @@ func TestWaitStateSeconds(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"wait_ten_seconds":{"Comment":"An example wait with seconds","InputPath":null,"Next":"NextState","OutputPath":null,"Seconds":10,"Type":"Wait"}}`, json)
+	assert.Equal(t, `{"wait_ten_seconds":{"Comment":"An example wait with seconds","InputPath":"$","Next":"NextState","OutputPath":"$","Seconds":10,"Type":"Wait"}}`, json)
 
 }
 
@@ -46,7 +46,7 @@ func TestWaitStateSecondsPath(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with seconds path","End":true,"InputPath":null,"OutputPath":null,"SecondsPath":"$.seconds","Type":"Wait"}}`, json)
+	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with seconds path","End":true,"InputPath":"$","OutputPath":"$","SecondsPath":"$.seconds","Type":"Wait"}}`, json)
 
 }
 
@@ -68,7 +68,7 @@ func TestWaitStateTimestamp(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with timestamp","InputPath":null,"Next":"NextState","OutputPath":null,"Timestamp":"2016-03-14T01:59:00Z","Type":"Wait"}}`, json)
+	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with timestamp","InputPath":"$","Next":"NextState","OutputPath":"$","Timestamp":"2016-03-14T01:59:00Z","Type":"Wait"}}`, json)
 
 }
 
@@ -90,6 +90,6 @@ func TestWaitStateTimestampPath(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with timestamp path","InputPath":null,"Next":"NextState","OutputPath":null,"TimestampPath":"$.expirydate","Type":"Wait"}}`, json)
+	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with timestamp path","InputPath":"$","Next":"NextState","OutputPath":"$","TimestampPath":"$.expirydate","Type":"Wait"}}`, json)
 
 }

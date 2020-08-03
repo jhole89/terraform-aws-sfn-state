@@ -22,7 +22,7 @@ locals {
     }
   ]
 
-  catches = [for catch in var.catch : merge({ result_path = null }, catch)]
+  catches = [for catch in var.catch : merge({ result_path = "$" }, catch)]
 
   local_defn = {
     Type                              = "Parallel"

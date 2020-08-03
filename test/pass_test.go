@@ -26,7 +26,7 @@ func TestPassState(t *testing.T) {
 	json := terraform.Output(t, terraformOptions, "json")
 	assert.Equal(
 		t,
-		`{"No-op":{"Comment":"An example pass state","End":true,"InputPath":null,"OutputPath":null,"Parameters":null,"Result":{"x-datum":0.381018,"y-datum":622.2269926397355},"ResultPath":"$.coords","Type":"Pass"}}`,
+		`{"No-op":{"Comment":"An example pass state","End":true,"InputPath":"$","OutputPath":"$","Parameters":null,"Result":{"x-datum":0.381018,"y-datum":622.2269926397355},"ResultPath":"$.coords","Type":"Pass"}}`,
 		json,
 	)
 

@@ -4,7 +4,7 @@ variable "name" {
 
 variable "comment" {
   type    = string
-  default = null
+  default = ""
 }
 
 variable "cause" {

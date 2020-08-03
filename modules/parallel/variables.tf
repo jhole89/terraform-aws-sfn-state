@@ -9,17 +9,17 @@ variable "next" {
 
 variable "comment" {
   type    = string
-  default = null
+  default = ""
 }
 
 variable "input_path" {
   type    = string
-  default = null
+  default = "$"
 }
 
 variable "output_path" {
   type    = string
-  default = null
+  default = "$"
 }
 
 variable "result" {
@@ -28,7 +28,7 @@ variable "result" {
 
 variable "result_path" {
   type    = string
-  default = null
+  default = "$"
 }
 
 variable "parameters" {
