@@ -12,6 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.13.0-rc1
 
       - name: Terraform fmt
         id: tf-fmt
@@ -36,3 +38,20 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color
+
+  go-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+
+      - name: Go fmt
+        id: go-fmt
+        run: go fmt
+        working-directory: test/
+
+      - name: Go Test
+        id: go-test
+        run: go test
+        working-directory: test/
