@@ -8,7 +8,7 @@ module "base" {
 locals {
   local_defn = {
     Type                              = "Pass"
-    var.next != null ? "Next" : "End" = var.next != null ? var.next : true
+    var.next != null ? "Next" : "End" = try(tobool(var.next) == null, var.next)
     Parameters                        = var.parameters
     Result                            = var.result
     ResultPath                        = var.result_path

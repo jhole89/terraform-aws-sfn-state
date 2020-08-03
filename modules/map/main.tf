@@ -33,7 +33,7 @@ locals {
 
   local_defn = {
     Type                              = "Map"
-    var.next != null ? "Next" : "End" = var.next != null ? var.next : true
+    var.next != null ? "Next" : "End" = try(tobool(var.next) == null, var.next)
     Parameters                        = var.parameters
     ResultPath                        = var.result_path
     MaxConcurrency                    = var.max_concurrency
@@ -57,8 +57,6 @@ locals {
 
     Iterator = {
       StartAt = var.iterator.start_at
-      //      States = local.states
-      //    }
       States = [for state in var.iterator.states : {
         (state.name) = state.state_defn
       }]
@@ -67,14 +65,4 @@ locals {
 
   state_defn = { (var.name) = merge(local.local_defn, module.base.defn) }
   json       = jsonencode(local.state_defn)
-}
-
-output "json" {
-  description = "JSON encoded state definition for use with other terraform resources"
-  value       = local.json
-}
-
-output "defn" {
-  description = "Raw state definition for use with other terraform resources"
-  value       = local.state_defn
 }

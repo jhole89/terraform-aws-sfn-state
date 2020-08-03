@@ -9,7 +9,7 @@ locals {
 
   local_defn = {
     Type                              = "Wait"
-    var.next != null ? "Next" : "End" = var.next != null ? tostring(var.next) : tobool(true)
+    var.next != null ? "Next" : "End" = try(tobool(var.next) == null, var.next)
     (var.time_metric)                 = var.time_value
   }
 

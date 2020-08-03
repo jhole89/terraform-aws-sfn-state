@@ -26,7 +26,7 @@ locals {
 
   local_defn = {
     Type                              = "Parallel"
-    var.next != null ? "Next" : "End" = var.next != null ? var.next : true
+    var.next != null ? "Next" : "End" = try(tobool(var.next) == null, var.next)
     Parameters                        = var.parameters
     ResultPath                        = var.result_path
     Retry = [

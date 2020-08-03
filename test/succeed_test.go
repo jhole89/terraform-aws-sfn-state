@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestSuccedState(t *testing.T) {
+func TestSucceedState(t *testing.T) {
 	t.Parallel()
 
 	// Setup
@@ -24,6 +24,6 @@ func TestSuccedState(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"SuccessState":{"Comment":"An example succeed state","InputPath":null,"OutputPath":null,"Type":"Succeed"}}`, json)
+	assert.Equal(t, `{"SuccessState":{"Comment":"An example succeed state","Type":"Succeed"}}`, json)
 
 }

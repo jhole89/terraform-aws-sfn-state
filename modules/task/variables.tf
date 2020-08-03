@@ -22,10 +22,6 @@ variable "output_path" {
   default = null
 }
 
-variable "result" {
-  default = null
-}
-
 variable "result_path" {
   type    = string
   default = null
@@ -46,7 +42,7 @@ variable "timeout_seconds" {
 
 variable "heartbeat_seconds" {
   type    = number
-  default = null
+  default = 1
 }
 
 variable "retry" {

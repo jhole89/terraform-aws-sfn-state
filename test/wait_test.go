@@ -46,7 +46,7 @@ func TestWaitStateSecondsPath(t *testing.T) {
 
 	// Test
 	json := terraform.Output(t, terraformOptions, "json")
-	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with seconds path","End": true,"InputPath":null,"OutputPath":null,"SecondsPath":"$.seconds","Type":"Wait"}}`, json)
+	assert.Equal(t, `{"wait_until":{"Comment":"An example wait with seconds path","End":true,"InputPath":null,"OutputPath":null,"SecondsPath":"$.seconds","Type":"Wait"}}`, json)
 
 }
 

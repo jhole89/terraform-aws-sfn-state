@@ -30,5 +30,5 @@ variable "choices" {
 }
 
 variable "default" {
-  type    = string
+  type = string
 }
