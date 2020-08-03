@@ -51,6 +51,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 0.13.0-rc1
+          terraform_wrapper: false
 
       - name: Go fmt
         id: go-fmt
