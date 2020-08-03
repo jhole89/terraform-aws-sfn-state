@@ -26,7 +26,7 @@ func TestChoiceState(t *testing.T) {
 	json := terraform.Output(t, terraformOptions, "json")
 	assert.Equal(
 		t,
-		`{"ChoiceStateX":{"Choices":[{"Next":"Private","StringEquals":"Private","Variable":"$.type"},{"Next":"Public","Not":{"StringEquals":"Private","Variable":"$.type"}},{"And":[{"NumericGreaterThanEquals":"20","Variable":"$.value"},{"NumericLessThan":"30","Variable":"$.value"}],"Next":"ValueInTwenties"}],"Comment":"An example choice state","Default":null,"InputPath":null,"OutputPath":null,"Type":"Choice"}}`,
+		`{"ChoiceStateX":{"Choices":[{"Next":"Private","StringEquals":"Private","Variable":"$.type"},{"Next":"Public","Not":{"StringEquals":"Private","Variable":"$.type"}},{"And":[{"NumericGreaterThanEquals":20,"Variable":"$.value"},{"NumericLessThan":30,"Variable":"$.value"}],"Next":"ValueInTwenties"}],"Comment":"An example choice state","Default":"DefaultState","InputPath":null,"OutputPath":null,"Type":"Choice"}}`,
 		json,
 	)
 

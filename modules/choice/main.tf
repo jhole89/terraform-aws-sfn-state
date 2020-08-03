@@ -9,7 +9,7 @@ locals {
 
   no_op_states = [
     for m in var.choices : (
-      m.operator == null ? [{ Next : m.next, Variable : m.rules[0].variable, (m.rules[0].rule) : m.rules[0].value }] : []
+      m.operator == null ? [{ Next : m.next, Variable : m.rules[0].variable, (m.rules[0].rule) : try(tonumber(m.rules[0].value), tobool(m.rules[0].value), tostring(m.rules[0].value)) }] : []
     )
   ]
 
@@ -20,7 +20,7 @@ locals {
           {
             (m.operator) : {
               Variable : m.rules[0].variable,
-              (m.rules[0].rule) : m.rules[0].value,
+              (m.rules[0].rule) : try(tonumber(m.rules[0].value), tobool(m.rules[0].value), tostring(m.rules[0].value)),
             },
             Next : m.next
           }
@@ -37,7 +37,7 @@ locals {
             (m.operator) : [
               for n in m.rules : {
                 Variable : n.variable,
-                (n.rule) : n.value,
+                (n.rule) : try(tonumber(n.value), tobool(n.value), tostring(n.value)),
               }
             ],
             Next : m.next,

@@ -24,12 +24,11 @@ variable "choices" {
     rules = list(object({
       variable = string
       rule     = string
-      value    = string
+      value    = any
     }))
   }))
 }
 
 variable "default" {
   type    = string
-  default = null
 }

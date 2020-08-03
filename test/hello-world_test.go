@@ -29,7 +29,7 @@ func TestHelloWorldState(t *testing.T) {
 		`"StartAt":"Pass",` +
 		`"States":{` +
 		  `"Hello World example?":{` +
-		    `"Choices":[{"BooleanEquals":"false","Next":"No","Variable":"$.IsHelloWorldExample"},{"Next":"Yes","Not":{"BooleanEquals":"false","Variable":"$.IsHelloWorldExample"}}],` +
+		    `"Choices":[{"BooleanEquals":false,"Next":"No","Variable":"$.IsHelloWorldExample"},{"Next":"Yes","Not":{"BooleanEquals":false,"Variable":"$.IsHelloWorldExample"}}],` +
 		    `"Comment":"A Choice state adds branching logic to a state machine. Choice rules can implement 16 different comparison operators, and can be combined using And, Or, and Not",` +
 		    `"Default":"No",` +
 		    `"InputPath":null,` +
@@ -39,8 +39,8 @@ func TestHelloWorldState(t *testing.T) {
 		  `"No":{"Cause":"Not Hello World","Comment":null,"Error":null,"Type":"Fail"},` +
 		  `"Parallel State":{` +
 		  `"Branches":[` +
-		    `{"StartAt":"hello","States":{"hello":{"Comment":null,"End":"true","InputPath":null,"OutputPath":null,"Parameters":null,"Result":null,"ResultPath":null,"Type":"Pass"}}},` +
-		    `{"StartAt":"world","States":{"world":{"Comment":null,"End":"true","InputPath":null,"OutputPath":null,"Parameters":null,"Result":null,"ResultPath":null,"Type":"Pass"}}}` +
+		    `{"StartAt":"hello","States":{"hello":{"Comment":null,"End":true,"InputPath":null,"OutputPath":null,"Parameters":null,"Result":null,"ResultPath":null,"Type":"Pass"}}},` +
+		    `{"StartAt":"world","States":{"world":{"Comment":null,"End":true,"InputPath":null,"OutputPath":null,"Parameters":null,"Result":null,"ResultPath":null,"Type":"Pass"}}}` +
 		  `],` +
 		  `"Catch":[],` +
 		  `"Comment":"A Parallel state can be used to create parallel branches of execution in your state machine.",` +
@@ -80,7 +80,7 @@ func TestHelloWorldState(t *testing.T) {
 		`},` +
 		`"helloworld":{` +
 		  `"Comment":null,` +
-		  `"End":"true",` +
+		  `"End":true,` +
 		  `"InputPath":null,` +
 		  `"OutputPath":null,` +
 		  `"Parameters":null,` +

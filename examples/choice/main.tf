@@ -2,6 +2,7 @@ module "choice" {
   source  = "../../modules/choice"
   comment = "An example choice state"
   name    = "ChoiceStateX"
+  default = "DefaultState"
   choices = [
     {
       operator = null
@@ -31,11 +32,11 @@ module "choice" {
         {
           variable = "$.value",
           rule     = "NumericGreaterThanEquals"
-          value    = "20"
+          value    = 20
           }, {
           variable = "$.value",
           rule     = "NumericLessThan"
-          value    = "30"
+          value    = 30
         }
       ]
     }

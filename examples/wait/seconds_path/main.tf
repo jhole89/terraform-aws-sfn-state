@@ -4,7 +4,6 @@ module "wait_until_s" {
   comment     = "An example wait with seconds path"
   time_metric = "SecondsPath"
   time_value  = "$.seconds"
-  next        = "NextState"
 }
 
 output "json" {
